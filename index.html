@@ -1,7 +1,6 @@
 <head>
     <title>My A-Frame Scene</title>
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-text-component@^0.4.1/dist/aframe-text-component.min.js"></script>
 </head>
 
 <body>
@@ -9,7 +8,6 @@
     <a-assets>
         <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
     </a-assets>
-    <a-entity text-geometry="value: What's up"></a-entity>
-    <a-entity text-geometry="value: Dog?; font: #optimerBoldFont"></a-entity>
+    <a-text value="Hello, World!" font="#optimerBoldFont"></a-text>
 </a-scene>
 </body>
