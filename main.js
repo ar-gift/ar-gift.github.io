@@ -18,6 +18,7 @@ AFRAME.registerComponent('markerhandler', {
     if (document.querySelector("#hb-marker").object3D.visible && !playing) {
       hbSound.play();
       playing = true;
+      console.log(hbSound, "play");
     } else {
       playing = false;
     }
