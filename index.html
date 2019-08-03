@@ -9,30 +9,33 @@
 
 <body>
 <a-scene embedded arjs>
+<!--    embedded arjs-->
     <a-assets>
         <a-asset-item id="optimerBoldFont" src="./fonts/helvetiker_regular.typeface.json">
     </a-assets>
     <a-marker preset="hiro">
         <a-entity
-                position="-0.95 1.13 0.2"
-                text-geometry="value: Happy; size: 0.5; font: #optimerBoldFont; weight: bold;"
+                position="-0.54 0.44 -0.06"
+                rotation="-90 0 0"
+                text-geometry="value: Happy; size: 0.3; font: #optimerBoldFont; weight: bold;"
         ></a-entity>
         <a-entity
-                position="-1.1 0.3 0.2"
-                text-geometry="value: birthday; size: 0.5; font: #optimerBoldFont; weight: bold;"
+                position="-0.67 0.44 0.42"
+                rotation="-90 0 0"
+                text-geometry="value: birthday; size: 0.3; font: #optimerBoldFont; weight: bold;"
         ></a-entity>
-<!--        <a-box position='0 0.5 0' material='color: yellow;'></a-box>-->
     </a-marker>
     <a-entity camera></a-entity>
-<!--    <a-box position='0 0.5 0' material='color: yellow;'></a-box>-->
+
 <!--    <a-entity-->
-<!--            position="-0.95 1.13 0.2"-->
-<!--            text-geometry="value: Happy; size: 0.5; font: #optimerBoldFont; weight: bold;"-->
+<!--            position="-0.54 0.44 -0.06"-->
+<!--            rotation="-90 0 0"-->
+<!--            text-geometry="value: Happy; size: 0.3; font: #optimerBoldFont; weight: bold;"-->
 <!--    ></a-entity>-->
 <!--    <a-entity-->
-<!--            position="-1.1 0.3 0.2"-->
-<!--            text-geometry="value: birthday; size: 0.5; font: #optimerBoldFont; weight: bold;"-->
+<!--            position="-0.67 0.44 0.42"-->
+<!--            rotation="-90 0 0"-->
+<!--            text-geometry="value: birthday; size: 0.3; font: #optimerBoldFont; weight: bold;"-->
 <!--    ></a-entity>-->
-<!--    <a-entity camera></a-entity>-->
 </a-scene>
 </body>
