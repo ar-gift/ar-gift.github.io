@@ -2,40 +2,59 @@
     <title>My A-Frame Scene</title>
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
+    <script src="https://unpkg.com/aframe-particleplayer-component/dist/aframe-particleplayer-component.min.js"></script>
+    <!--    Inspectir-->
 <!--    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"></script>-->
     <script src="./components/text-geometry.js"></script>
     <script src="./main.js"></script>
 </head>
 
 <body>
-<a-scene embedded arjs>
+<a-scene>
 <!--    embedded arjs-->
     <a-assets>
+        <a-asset-item id="fireworkParticle" src="./assets/fireworks.json"></a-asset-item>
+        <img src="./assets/sprite.png" id="fireworkParticleTex">
         <a-asset-item id="optimerBoldFont" src="./fonts/helvetiker_regular.typeface.json">
     </a-assets>
+
     <a-marker preset="hiro">
+        <a-entity position="0 0 0"
+                  trigger
+                  particleplayer="on: starFireworks; src: #fireworkParticle; img: #fireworkParticleTex; dur: 4000; count: 50%; scale: 0.6; pscale: 1; interpolate: true; shader: standard; poolSize: 20"></a-entity>
+
         <a-entity
                 position="-0.54 0.44 -0.06"
                 rotation="-90 0 0"
+                material="color: red"
                 text-geometry="value: Happy; size: 0.3; font: #optimerBoldFont; weight: bold;"
         ></a-entity>
         <a-entity
                 position="-0.67 0.44 0.42"
                 rotation="-90 0 0"
+                material="color: red"
                 text-geometry="value: birthday; size: 0.3; font: #optimerBoldFont; weight: bold;"
         ></a-entity>
+        <a-plane rotation="-90 0 0" material="color: #36006f" width="4" height="4"></a-plane>
     </a-marker>
     <a-entity camera></a-entity>
+
+<!--    <a-entity position="0 0 0"-->
+<!--              trigger-->
+<!--              particleplayer="on: starFireworks; src: #fireworkParticle; img: #fireworkParticleTex; dur: 4000; count: 50%; scale: 0.6; pscale: 1; interpolate: true; shader: standard; poolSize: 20"></a-entity>-->
 
 <!--    <a-entity-->
 <!--            position="-0.54 0.44 -0.06"-->
 <!--            rotation="-90 0 0"-->
+<!--            material="color: red"-->
 <!--            text-geometry="value: Happy; size: 0.3; font: #optimerBoldFont; weight: bold;"-->
 <!--    ></a-entity>-->
 <!--    <a-entity-->
 <!--            position="-0.67 0.44 0.42"-->
 <!--            rotation="-90 0 0"-->
+<!--            material="color: red"-->
 <!--            text-geometry="value: birthday; size: 0.3; font: #optimerBoldFont; weight: bold;"-->
 <!--    ></a-entity>-->
+<!--    <a-plane rotation="-90 0 0" material="color: #36006f" width="4" height="4"></a-plane>-->
 </a-scene>
 </body>
