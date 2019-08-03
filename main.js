@@ -20,7 +20,10 @@ AFRAME.registerComponent('markerhandler', {
       playing = true;
     } else {
       playing = document.querySelector("#hb-marker").object3D.visible;
-      !playing && hbSound.stop();
+      if (!playing) {
+        hbSound.pause();
+        hbSound.currentTime = 0;
+      };
     }
   }
 });
