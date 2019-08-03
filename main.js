@@ -1,10 +1,12 @@
 var playing = false;
-var hbSound = new Audio("./assets/happy-birthday.wav");
+var hbSound = new Audio("./assets/happy-birthday.mp3");
 
 //Detect end of audio
 hbSound.addEventListener("ended", function() {
   hbSound.currentTime = 0;
-  playing = true;
+  if (playing) {
+    hbSound.play();
+  }
 });
 
 AFRAME.registerComponent('markerhandler', {
