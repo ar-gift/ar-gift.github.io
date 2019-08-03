@@ -1,6 +1,7 @@
 <head>
     <title>My A-Frame Scene</title>
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <!--    AR-->
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
     <script src="https://unpkg.com/aframe-particleplayer-component/dist/aframe-particleplayer-component.min.js"></script>
     <!--    Inspectir-->
@@ -13,15 +14,26 @@
 <a-scene>
 <!--    embedded arjs-->
     <a-assets>
-        <a-asset-item id="fireworkParticle" src="./assets/fireworks.json"></a-asset-item>
+        <a-asset-item id="fireworkParticle" src="./assets/particles-fireworks.json"></a-asset-item>
+        <a-asset-item id="dustParticle" src="./assets/particles-dust.json"></a-asset-item>
+        <a-asset-item id="energyParticle" src="./assets/particles-energy.json"></a-asset-item>
         <img src="./assets/sprite.png" id="fireworkParticleTex">
+        <img src="./assets/dust.png" id="dustParticleTex">
+        <img src="./assets/energy.png" id="energyParticleTex">
         <a-asset-item id="optimerBoldFont" src="./fonts/helvetiker_regular.typeface.json">
     </a-assets>
 
     <a-marker preset="hiro">
         <a-entity position="0 0 0"
-                  trigger
-                  particleplayer="on: starFireworks; src: #fireworkParticle; img: #fireworkParticleTex; dur: 4000; count: 50%; scale: 0.6; pscale: 1; interpolate: true; shader: standard; poolSize: 20"></a-entity>
+                  otation="0 -90 0"
+                  particleplayer="delay: 300; src: #fireworkParticle; img: #fireworkParticleTex; dur: 3000; count: 50%; scale: 0.6; pscale: 1; interpolate: true; shader: standard; poolSize: 20"></a-entity>
+
+        <!-- energy -->
+        <a-entity position="0 0 0" rotation="0 -90 0" particleplayer="delay: 500; src: #energyParticle; img: #energyParticleTex; dur: 5000; count: 100%; scale: 1.5; pscale: 2; interpolate: false; shader: standard; poolSize: 1; loop: true;"></a-entity>
+        <!--    start-->
+        <a-entity position="1 0 0" rotation="0 -90 0" particleplayer="delay: 200; src: #dustParticle; img: #dustParticleTex; dur: 2000; count: 100%; scale: 1.5; pscale: 1; interpolate: false; shader: standard; poolSize: 1; loop: true; color: #aaf"></a-entity>v
+        <a-entity position="-1 0 0" rotation="0 -90 0" particleplayer="delay: 200; src: #dustParticle; img: #dustParticleTex; dur: 2000; count: 100%; scale: 1.5; pscale: 1; interpolate: false; shader: standard; poolSize: 1; loop: true; color: #aaf"></a-entity>v
+        <!--    start-->
 
         <a-entity
                 position="-0.54 0.44 -0.06"
@@ -35,13 +47,20 @@
                 material="color: red"
                 text-geometry="value: birthday; size: 0.3; font: #optimerBoldFont; weight: bold;"
         ></a-entity>
-        <a-plane rotation="-90 0 0" material="color: #36006f" width="4" height="4"></a-plane>
+        <a-plane rotation="-90 0 0" material="color: #36006f" width="10" height="10"></a-plane>
     </a-marker>
     <a-entity camera></a-entity>
 
 <!--    <a-entity position="0 0 0"-->
-<!--              trigger-->
-<!--              particleplayer="on: starFireworks; src: #fireworkParticle; img: #fireworkParticleTex; dur: 4000; count: 50%; scale: 0.6; pscale: 1; interpolate: true; shader: standard; poolSize: 20"></a-entity>-->
+<!--              otation="0 -90 0"-->
+<!--              particleplayer="delay: 300; src: #fireworkParticle; img: #fireworkParticleTex; dur: 3000; count: 50%; scale: 0.6; pscale: 1; interpolate: true; shader: standard; poolSize: 20"></a-entity>-->
+
+<!--    &lt;!&ndash; energy &ndash;&gt;-->
+<!--    <a-entity position="0 0 0" rotation="0 -90 0" particleplayer="delay: 500; src: #energyParticle; img: #energyParticleTex; dur: 5000; count: 100%; scale: 1.5; pscale: 2; interpolate: false; shader: standard; poolSize: 1; loop: true;"></a-entity>-->
+<!--    &lt;!&ndash;    start&ndash;&gt;-->
+<!--    <a-entity position="1 0 0" rotation="0 -90 0" particleplayer="delay: 200; src: #dustParticle; img: #dustParticleTex; dur: 2000; count: 100%; scale: 1.5; pscale: 1; interpolate: false; shader: standard; poolSize: 1; loop: true; color: #aaf"></a-entity>v-->
+<!--    <a-entity position="-1 0 0" rotation="0 -90 0" particleplayer="delay: 200; src: #dustParticle; img: #dustParticleTex; dur: 2000; count: 100%; scale: 1.5; pscale: 1; interpolate: false; shader: standard; poolSize: 1; loop: true; color: #aaf"></a-entity>v-->
+<!--    &lt;!&ndash;    start&ndash;&gt;-->
 
 <!--    <a-entity-->
 <!--            position="-0.54 0.44 -0.06"-->
@@ -55,6 +74,6 @@
 <!--            material="color: red"-->
 <!--            text-geometry="value: birthday; size: 0.3; font: #optimerBoldFont; weight: bold;"-->
 <!--    ></a-entity>-->
-<!--    <a-plane rotation="-90 0 0" material="color: #36006f" width="4" height="4"></a-plane>-->
+<!--    <a-plane rotation="-90 0 0" material="color: #36006f" width="10" height="10"></a-plane>-->
 </a-scene>
 </body>
