@@ -13,8 +13,7 @@ AFRAME.registerComponent('markerhandler', {
     this.tick = AFRAME.utils.throttleTick(this.tick, 500, this);
   },
   tick: function() {
-    console.log(document.querySelector("#hb-marker").object3D);
-    if (document.querySelector("#hb-marker").object3D.visible && playing) {
+    if (document.querySelector("#hb-marker").object3D.visible && !playing) {
       hbSound.play();
       playing = true;
     } else {
