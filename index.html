@@ -1,9 +1,9 @@
 <head>
     <title>My A-Frame Scene</title>
-    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="./library/aframe.min.js"></script>
     <!--    AR-->
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
-    <script src="https://unpkg.com/aframe-particleplayer-component/dist/aframe-particleplayer-component.min.js"></script>
+    <script src="./library/aframe-ar.js"></script>
+    <script src="./library/aframe-particleplayer-component.min.js"></script>
     <!--    Inspectir-->
 <!--    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"></script>-->
     <script src="./components/text-geometry.js"></script>
@@ -20,10 +20,12 @@
         <img src="./assets/sprite.png" id="fireworkParticleTex">
         <img src="./assets/dust.png" id="dustParticleTex">
         <img src="./assets/energy.png" id="energyParticleTex">
-        <a-asset-item id="optimerBoldFont" src="./fonts/helvetiker_regular.typeface.json">
+        <a-asset-item id="optimerBoldFont" src="./fonts/Celebrater_Regular.json">
     </a-assets>
 
     <a-marker preset="hiro">
+
+
         <a-entity position="0 0 0"
                   otation="0 -90 0"
                   particleplayer="delay: 300; src: #fireworkParticle; img: #fireworkParticleTex; dur: 3000; count: 50%; scale: 0.6; pscale: 1; interpolate: true; shader: standard; poolSize: 20"></a-entity>
@@ -35,45 +37,29 @@
         <a-entity position="-1 0 0" rotation="0 -90 0" particleplayer="delay: 200; src: #dustParticle; img: #dustParticleTex; dur: 2000; count: 100%; scale: 1.5; pscale: 1; interpolate: false; shader: standard; poolSize: 1; loop: true; color: #aaf"></a-entity>v
         <!--    start-->
 
-        <a-entity
-                position="-0.54 0.44 -0.06"
-                rotation="-90 0 0"
-                material="color: red"
-                text-geometry="value: Happy; size: 0.3; font: #optimerBoldFont; weight: bold;"
-        ></a-entity>
-        <a-entity
-                position="-0.67 0.44 0.42"
-                rotation="-90 0 0"
-                material="color: red"
-                text-geometry="value: birthday; size: 0.3; font: #optimerBoldFont; weight: bold;"
-        ></a-entity>
-        <a-plane rotation="-90 0 0" material="color: #36006f" width="10" height="10"></a-plane>
+        <!-- text -->
+        <a-entity position="-0.40962 0.43947 -0.02243" rotation="-89.99963750135457 16.184911796855495 0" material="color: #3cd2fc; emissive: #3cd2fc; metalness: 1" text-geometry="value: H; size: 0.3; font: #optimerBoldFont; weight: bold"></a-entity>
+        <a-entity position="-0.26957 0.44 -0.04964" rotation="-89.99963750135457 -4.650125465281761 0" material="color: #f41511; emissive: #f41511; metalness: 1" text-geometry="value: A; size: 0.3; font: #optimerBoldFont; weight: bold"></a-entity>
+        <a-entity position="-0.04214 0.44 -0.04205" rotation="-90.00021045914971 -12.175926104325125 0" material="color: #fed915; emissive: #fed915" text-geometry="value: P; size: 0.3; font: #optimerBoldFont; weight: bold"></a-entity>
+        <a-entity position="0.23126 0.44 -0.026" rotation="-90 0 0" material="color: #2fe900; emissive: #02f61a" text-geometry="value: P; size: 0.3; font: #optimerBoldFont; weight: bold"></a-entity>
+        <a-entity position="0.50834 0.44 0.0252" rotation="-89.99963750135457 14.047206263222392 0" material="color: #170c07; emissive: #fe9111" text-geometry="value: Y; size: 0.3; font: #optimerBoldFont; weight: bold"></a-entity>
+
+
+        <a-entity position="-0.87175 0.44 0.25092" rotation="-89.99963750135457 -4.650125465281761 0" material="color: #f41511; emissive: #f41511; metalness: 1" text-geometry="value: B; size: 0.3; font: #optimerBoldFont; weight: bold"></a-entity>
+        <a-entity position="-0.64398 0.44 0.27901" rotation="-90.00021045914971 -12.175926104325125 0" material="color: #fed915; emissive: #fed915" text-geometry="value: i; size: 0.3; font: #optimerBoldFont; weight: bold"></a-entity>
+        <a-entity position="-0.42657 0.44 0.29439" rotation="-90 0 0" material="color: #2fe900; emissive: #02f61a" text-geometry="value: R; size: 0.3; font: #optimerBoldFont; weight: bold"></a-entity>
+        <a-entity position="-0.13647 0.44 0.33987" rotation="-89.99963750135457 10.388870741312088 0" material="color: #170c07; emissive: #fe9111" text-geometry="value: T; size: 0.3; font: #optimerBoldFont; weight: bold"></a-entity>
+        <a-entity position="0.12596 0.43947 0.30064" rotation="-89.99963750135457 16.184911796855495 0" material="color: #3cd2fc; emissive: #3cd2fc; metalness: 1" text-geometry="value: H; size: 0.3; font: #optimerBoldFont; weight: bold"></a-entity>
+        <a-entity position="0.33443 0.44 0.29989" rotation="-89.99963750135457 -4.650125465281761 0" material="color: #f41511; emissive: #f41511; metalness: 1" text-geometry="value: D; size: 0.3; font: #optimerBoldFont; weight: bold"></a-entity>
+        <a-entity position="0.58215 0.44 0.2863" rotation="-89.99963750135457 -4.650125465281761 0" material="color: #f519f4; emissive: #f519f4; metalness: 1" text-geometry="value: A; size: 0.3; font: #optimerBoldFont; weight: bold"></a-entity>
+        <a-entity position="0.88814 0.44 0.32985" rotation="-89.99963750135457 14.047206263222392 0" material="color: #170c07; emissive: #fe9111" text-geometry="value: Y; size: 0.3; font: #optimerBoldFont; weight: bold"></a-entity>
+
+        <!-- /text -->
+        <a-plane rotation="-90 0 0" material="color: #36006f" width="10" height="10" sound="src: url(./assets/happy-birthday.wav); autoplay: false; loop: true;"></a-plane>
+
+
     </a-marker>
     <a-entity camera></a-entity>
 
-<!--    <a-entity position="0 0 0"-->
-<!--              otation="0 -90 0"-->
-<!--              particleplayer="delay: 300; src: #fireworkParticle; img: #fireworkParticleTex; dur: 3000; count: 50%; scale: 0.6; pscale: 1; interpolate: true; shader: standard; poolSize: 20"></a-entity>-->
-
-<!--    &lt;!&ndash; energy &ndash;&gt;-->
-<!--    <a-entity position="0 0 0" rotation="0 -90 0" particleplayer="delay: 500; src: #energyParticle; img: #energyParticleTex; dur: 5000; count: 100%; scale: 1.5; pscale: 2; interpolate: false; shader: standard; poolSize: 1; loop: true;"></a-entity>-->
-<!--    &lt;!&ndash;    start&ndash;&gt;-->
-<!--    <a-entity position="1 0 0" rotation="0 -90 0" particleplayer="delay: 200; src: #dustParticle; img: #dustParticleTex; dur: 2000; count: 100%; scale: 1.5; pscale: 1; interpolate: false; shader: standard; poolSize: 1; loop: true; color: #aaf"></a-entity>v-->
-<!--    <a-entity position="-1 0 0" rotation="0 -90 0" particleplayer="delay: 200; src: #dustParticle; img: #dustParticleTex; dur: 2000; count: 100%; scale: 1.5; pscale: 1; interpolate: false; shader: standard; poolSize: 1; loop: true; color: #aaf"></a-entity>v-->
-<!--    &lt;!&ndash;    start&ndash;&gt;-->
-
-<!--    <a-entity-->
-<!--            position="-0.54 0.44 -0.06"-->
-<!--            rotation="-90 0 0"-->
-<!--            material="color: red"-->
-<!--            text-geometry="value: Happy; size: 0.3; font: #optimerBoldFont; weight: bold;"-->
-<!--    ></a-entity>-->
-<!--    <a-entity-->
-<!--            position="-0.67 0.44 0.42"-->
-<!--            rotation="-90 0 0"-->
-<!--            material="color: red"-->
-<!--            text-geometry="value: birthday; size: 0.3; font: #optimerBoldFont; weight: bold;"-->
-<!--    ></a-entity>-->
-<!--    <a-plane rotation="-90 0 0" material="color: #36006f" width="10" height="10"></a-plane>-->
 </a-scene>
 </body>
