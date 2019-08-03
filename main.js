@@ -20,8 +20,6 @@ AFRAME.registerComponent('markerhandler', {
       hbSound.play();
       playing = true;
       console.log(hbSound, "play");
-    } else {
-      playing = document.querySelector("#hb-marker").object3D.visible;
     }
   }
 });
