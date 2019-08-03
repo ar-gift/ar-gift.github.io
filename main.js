@@ -21,7 +21,7 @@ AFRAME.registerComponent('markerhandler', {
       playing = true;
       console.log(hbSound, "play");
     } else {
-      playing = false;
+      playing = document.querySelector("#hb-marker").object3D.visible;
     }
   }
 });
