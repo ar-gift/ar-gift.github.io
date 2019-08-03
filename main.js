@@ -1,5 +1,5 @@
 var playing = false;
-var hbSound = new Audio("/assets/happy-birthday.mp3");
+var hbSound = new Audio("https://ar-gift.github.io/assets/happy-birthday.mp3");
 
 //Detect end of audio
 hbSound.addEventListener("ended", function() {
