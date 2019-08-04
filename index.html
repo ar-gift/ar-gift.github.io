@@ -3,9 +3,9 @@
     <script src="./library/aframe.min.js"></script>
     <script src="./library/aframe-particleplayer-component.min.js"></script>
     <!--    AR-->
-    <script src="./library/aframe-ar.js"></script>
+<!--    <script src="./library/aframe-ar.js"></script>-->
     <!--    Inspectir-->
-<!--    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"></script>
     <script src="./components/text-geometry.js"></script>
     <script src="./main.js"></script>
 </head>
@@ -16,25 +16,31 @@
     <a-assets>
         <a-asset-item id="fireworkParticle" src="./assets/particles-fireworks.json"></a-asset-item>
         <a-asset-item id="dustParticle" src="./assets/particles-dust.json"></a-asset-item>
-        <a-asset-item id="energyParticle" src="./assets/particles-energy.json"></a-asset-item>
-        <img src="./assets/sprite.png" id="fireworkParticleTex">
+        <img src="assets/proba.jpg" id="fireworkParticleTex">
         <img src="./assets/dust.png" id="dustParticleTex">
-        <img src="./assets/energy.png" id="energyParticleTex">
         <a-asset-item id="optimerBoldFont" src="./fonts/Celebrater_Regular.json">
     </a-assets>
 
-    <a-marker preset="hiro" id="hb-marker" markerhandler emitevents="true">
+<!--    <a-marker preset="hiro" id="hb-marker" markerhandler emitevents="true">-->
 
 
-        <a-entity position="0 0 0"
-                  otation="0 -90 0"
-                  particleplayer="delay: 300; src: #fireworkParticle; img: #fireworkParticleTex; dur: 3000; count: 50%; scale: 0.6; pscale: 1; interpolate: true; shader: standard; poolSize: 20"></a-entity>
+        <a-entity position="0.2 -0.2 0"
+                  rotation="-90 -90 180"
+                  particleplayer="delay: 300; src: #fireworkParticle; img: #fireworkParticleTex; dur: 3000; count: 30%; scale: 0.5; pscale: 1; interpolate: true; shader: standard; poolSize: 10; loop: true; color: #3cd2fc;"></a-entity>
 
-        <!-- energy -->
-        <a-entity position="0 0 0" rotation="0 -90 0" particleplayer="delay: 500; src: #energyParticle; img: #energyParticleTex; dur: 5000; count: 100%; scale: 1.5; pscale: 2; interpolate: false; shader: standard; poolSize: 1; loop: true;"></a-entity>
+        <a-entity position="-0.45 -0.27 -0.34"
+              rotation="-90 -90 180"
+              particleplayer="delay: 300; src: #fireworkParticle; img: #fireworkParticleTex; dur: 3000; count: 30%; scale: 0.5; pscale: 1; interpolate: true; shader: standard; poolSize: 10; loop: true; color: #fe9111;"></a-entity>
+
+
+        <a-entity position="0 -0.7 0.23"
+              rotation="-90 -90 180"
+              particleplayer="delay: 300; src: #fireworkParticle; img: #fireworkParticleTex; dur: 3000; count: 30%; scale: 0.5; pscale: 1; interpolate: true; shader: standard; poolSize: 10; loop: true; color: #02f61a;"></a-entity>
+
+    <!-- energy -->
         <!--    start-->
-        <a-entity position="1 0 0" rotation="0 -90 0" particleplayer="delay: 200; src: #dustParticle; img: #dustParticleTex; dur: 2000; count: 100%; scale: 1.5; pscale: 1; interpolate: false; shader: standard; poolSize: 1; loop: true; color: #aaf"></a-entity>v
-        <a-entity position="-1 0 0" rotation="0 -90 0" particleplayer="delay: 200; src: #dustParticle; img: #dustParticleTex; dur: 2000; count: 100%; scale: 1.5; pscale: 1; interpolate: false; shader: standard; poolSize: 1; loop: true; color: #aaf"></a-entity>v
+        <a-entity position="1 0 0" rotation="0 -90 0" particleplayer="delay: 100; src: #dustParticle; img: #dustParticleTex; dur: 2000; count: 100%; scale: 1.5; pscale: 1; interpolate: false; shader: lambert; poolSize: 1; loop: true; color: #fe9111;"></a-entity>v
+        <a-entity position="-1 0 0" rotation="0 -90 0" particleplayer="delay: 100; src: #dustParticle; img: #dustParticleTex; dur: 2000; count: 100%; scale: 1.5; pscale: 1; interpolate: false; shader: lambert; poolSize: 1; loop: true; color: #fe9111"></a-entity>v
         <!--    start-->
 
         <!-- text -->
@@ -57,9 +63,12 @@
         <!-- /text -->
         <a-plane rotation="-90 0 0" material="color: #36006f" width="10" height="10"></a-plane>
 
+        <!-- light -->
+        <a-entity light="intensity: 0.6; castShadow: true" position="-0.08272 1.99863 -0.52801" data-aframe-default-light="" aframe-injected=""></a-entity>
 
-    </a-marker>
-    <a-entity camera></a-entity>
+
+<!--    </a-marker>-->
+<!--    <a-entity camera></a-entity>-->
 
 </a-scene>
 </body>
