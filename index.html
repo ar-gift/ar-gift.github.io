@@ -1,5 +1,6 @@
 <head>
-    <title>My A-Frame Scene</title>
+    <title>Happy birthday</title>
+    <link rel="HP" href="./assets/favicon.ico" />
     <script src="./library/aframe.min.js"></script>
     <script src="./library/aframe-particleplayer-component.min.js"></script>
     <!--    AR-->
@@ -11,7 +12,7 @@
 </head>
 
 <body>
-<a-scene>
+<a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 <!--    embedded arjs-->
     <a-assets>
         <a-asset-item id="fireworkParticle" src="./assets/particles-fireworks.json"></a-asset-item>
