@@ -3,9 +3,9 @@
     <script src="./library/aframe.min.js"></script>
     <script src="./library/aframe-particleplayer-component.min.js"></script>
     <!--    AR-->
-<!--    <script src="./library/aframe-ar.js"></script>-->
+    <script src="./library/aframe-ar.js"></script>
     <!--    Inspectir-->
-    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js"></script>-->
     <script src="./components/text-geometry.js"></script>
     <script src="./main.js"></script>
 </head>
@@ -19,9 +19,12 @@
         <img src="assets/proba.jpg" id="fireworkParticleTex">
         <img src="./assets/dust.png" id="dustParticleTex">
         <a-asset-item id="optimerBoldFont" src="./fonts/Celebrater_Regular.json">
+        <a-asset-item id="boxBlue" src="./assets/box-blue.glb">
+        <a-asset-item id="boxYellow" src="./assets/box-yellow.glb">
+        <a-asset-item id="boxGreen" src="./assets/box-green.glb">
     </a-assets>
 
-<!--    <a-marker preset="hiro" id="hb-marker" markerhandler emitevents="true">-->
+    <a-marker preset="hiro" id="hb-marker" markerhandler emitevents="true">
 
 
         <a-entity position="0.2 -0.2 0"
@@ -66,9 +69,19 @@
         <!-- light -->
         <a-entity light="intensity: 0.6; castShadow: true" position="-0.08272 1.99863 -0.52801" data-aframe-default-light="" aframe-injected=""></a-entity>
 
+        <!-- boxes -->
+         <a-entity gltf-model="#boxBlue" animation="property: position; to: -1.07 0.5 0.64; dir: alternate; dur: 2000; loop: true;" scale="0.15 0.15 0.15" position="-1.07 0.4 0.6" rotation="-38 72 -60"></a-entity>
+         <a-entity gltf-model="#boxBlue" animation="property: position; to: 0.84 0.46 0.5; dir: alternate; dur: 1000; loop: true;" scale="0.13 0.13 0.13" position="0.84 0.46 0.675" rotation="-29.5 59.2 -37.23"></a-entity>
+         <a-entity gltf-model="#boxBlue" animation="property: position; to: -1.14 0.28 -0.3; dir: alternate; dur: 2000; loop: true;" scale="0.1 0.1 0.1" position="-1.04 0.28 -0.29" rotation="-9.5 67.12 -35.7"></a-entity>
 
-<!--    </a-marker>-->
-<!--    <a-entity camera></a-entity>-->
+         <a-entity gltf-model="#boxYellow" animation="property: position; to: -0.41 0.34 0.6; dir: alternate; dur: 1500; loop: true;" scale="0.2 0.2 0.2" position="-0.41 0.34 0.86" rotation="-38 72 -60"></a-entity>
+         <a-entity gltf-model="#boxYellow" animation="property: position; to: 0.96 0.44 -0.19; dir: alternate; dur: 1500; loop: true;" scale="0.12 0.12 0.12" position="0.96 0.44 -0.29" rotation="-14.9 40.2 -15.69"></a-entity>
+
+         <a-entity gltf-model="#boxGreen" animation="property: position; to: 0.08 0.29 -0.4; dir: alternate; dur: 2500; loop: true;" scale="0.12 0.12 0.12" position="0.08 0.29 -0.66" rotation="-30 46 -31.69"></a-entity>
+         <a-entity gltf-model="#boxGreen" animation="property: position; to: 0.25 0.36 0.68; dir: alternate; dur: 1500; loop: true;" scale="0.12 0.12 0.12" position="0.25 0.36 0.55" rotation="-65 84 -70.3"></a-entity>
+
+    </a-marker>
+    <a-entity camera></a-entity>
 
 </a-scene>
 </body>
